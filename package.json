@@ -7,15 +7,16 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^31.0.2",
+    "@expo/vector-icons": "^9.0.0",
+    "expo": "^32.0.0",
     "native-base": "^2.10.0",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-native-camera": "^1.6.4",
-    "react-native-navigation": "^2.4.0",
-    "react-native-qrcode-scanner": "^1.1.2",
-    "react-native-qrcode-svg": "^5.1.1",
-    "react-navigation": "^3.0.9"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-easy-grid": "^0.2.0",
+    "react-navigation": "^3.0.9",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"

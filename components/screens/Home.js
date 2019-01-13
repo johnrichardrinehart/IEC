@@ -1,22 +1,14 @@
-import React from 'react';
-import { Container, Header, Left, Body, Title} from 'native-base';
-import {Font} from 'expo';
-import CardsStops from './HomeComponents/CardsStops';
+import React from 'react'
+import { Font } from 'expo';
+import ModalUserID from './HomeComponents/ModalUserID'
+import HomeScreen from './HomeComponents/HomeScreen'
 
 export default class extends React.Component {
     state = {
+        // width: undefined,
+        // height: undefined,
+        // viewLoaded: false,
         fontLoaded: false,
-    }
-
-    _header = () => {
-        return (
-            <Header>
-                <Left />
-                <Body>
-                    <Title>Stops</Title>
-                </Body>
-            </Header>
-        )
     }
 
     async componentWillMount() {
@@ -27,15 +19,17 @@ export default class extends React.Component {
     }
 
     render() {
-        if (this.state.fontLoaded) {
-            return (
-                <Container>
-                    {this._header()}
-                    <CardsStops navigation={this.props.navigation} />
-                </Container>
-            )
+        if (this.state.fontLoaded && this.props.userID) {
+            return <HomeScreen />
         } else {
-            return <Container />
+            return <ModalUserID setUserID={this.props.setUserID} />
         }
     }
+
+    // _onLayout = ev => {
+    //     let { width, height } = ev.nativeEvent.layout
+    //     this.setState({ width, height, viewLoaded: true })
+    //     console.log("Obtained dimensions.")
+    //     console.log(ev.nativeEvent.layout)
+    // }
 }
